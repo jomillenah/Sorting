@@ -1,0 +1,74 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+
+{
+const int m=4;
+int data[m],i,j,k,min,minindex,n;
+
+cout<<"Enter the number of values: ";
+
+cin>>n;
+
+cout<<"Enter the values: "<<endl;
+
+for(i=0;i<n;i++)
+
+cin>>data[i] ;
+
+cout<<endl;
+
+cout<<"The list to be sorted is: ";
+
+for(i=0;i<n;i++)
+
+cout<<data[i]<<" ";
+
+cout<<"\n" ;
+
+cout<<"\nSelection sort: "<<endl;
+
+
+for(i=0;i<n;i++)
+
+{
+
+minindex=i;
+
+min=data[i] ;
+
+for(j=i+1;j<n;j++)
+
+{
+
+if(min>data[j])
+
+{
+
+minindex=j;
+
+min=data[j] ;
+
+}
+
+}
+
+data [minindex] =data [i];
+
+data[i]=min;
+
+cout<<i+1;
+
+for(k=0;k<n;k++ )
+
+cout<<" "<<data[k];
+
+cout<<endl;
+
+}
+
+return 0;
+
+}
